@@ -1,0 +1,19 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "random-images",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-10-01",
+	"observability": {
+		"enabled": true,
+	},
+	"vars": {
+		"ANIMAL_AVATARS_PUBLIC_URL": "https://animal-avatars.klegul.dev",
+	},
+	"r2_buckets": [
+		{
+			"binding": "ANIMAL_AVATARS",
+			"bucket_name": "animal-avatars",
+			"jurisdiction": "eu",
+		},
+	],
+}
